@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.hp.refreshlist.RefreshListView.RefreshBgView
+            android:id="@+id/bg_view"
+            android:layout_width="250dp"
+            android:layout_height="160dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="-30dp"
+            android:indeterminateDrawable="@drawable/loading_bg1"/>
+  <View
+      android:id="@+id/view"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_centerInParent="true"/>
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_below="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="-200dp"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@anim/loading_bg2"
+            />
+
+        <com.example.hp.refreshlist.RefreshListView.RefreshAnimView
+            android:id="@+id/first_step_view"
+            android:layout_width="49dp"
+            android:layout_height="59dp"
+            android:layout_alignTop="@+id/progress"
+            android:layout_marginBottom="40dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"/>
+
+        <com.example.hp.refreshlist.RefreshListView.RefreshLoadingView
+            android:id="@+id/second_step_view"
+            android:layout_width="49dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/progress"
+            android:layout_marginBottom="40dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
